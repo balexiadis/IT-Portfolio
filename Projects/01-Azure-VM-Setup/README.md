@@ -27,7 +27,8 @@ Set up a dedicated resource group (`01-Virtual-Machines`) to keep all resources 
 ### 3. Provisioned the Virtual Machine
 Named the VM (`01-Windows-Server-VM`), Selected a Windows Server 2022 image, set region to 'Australia East', chose the standard B2 (free-tier eligible) size, and configured the admin username/password, left default port open for future use.
 
-![VM creation blade](images/02-vm-create.png)
+![VM creation blade](images/3-vm-details.png)
+![VM creation blade](images/3-deployment-complete.png)
 
 ### 3. Connect via Remote Desktop
 By default, Azure opens RDP (port 3389) to the whole internet meaning any machine can connect to it. I tested this by downloading the RDP file from the Azure Portal and using the Windows App for MacOS with the credentials set during provisioning.
