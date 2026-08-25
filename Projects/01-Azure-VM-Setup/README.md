@@ -29,22 +29,22 @@ Named the VM (`01-Windows-Server-VM`), Selected a Windows Server 2022 image, set
 
 ![VM creation blade](images/02-vm-create.png)
 
-### 3. Connect to the Windows Server VM
-By default, Azure opens RDP (port 3389) to the whole internet meaning any machine can connect to it with the credentials we set. I tested to see if this functioned correctly.
+### 3. Connect via Remote Desktop
+By default, Azure opens RDP (port 3389) to the whole internet meaning any machine can connect to it. I tested this by downloading the RDP file from the Azure Portal and using the Windows App for MacOS with the credentials set during provisioning.
 
 ### 3. Configured the Network Security Group
-Because RDP (port 3389) is open to the whole internet, this opens a security risk. I edited the inbound rule to restrict RDP access to my home IP address only.
+Because RDP (port 3389) is open to the whole internet, this opens a security risk. I edited the inbound rule to restrict RDP access to my home IP address only. Networking -> Network Settings -> Rules -> RDP -> Changed 'Source IP' from 'Any' to 'My IP Address'
 
 ![NSG inbound rule restricted to my IP](images/03-nsg-rule.png)
 
-### 4. Connected via Remote Desktop
-Downloaded the RDP file from the Azure portal and connected using the credentials set during provisioning.
+### 4. Retry Connection
+Attempted connection from 2 different machines: 1 with the authorised IP address and 1 without to test that the NSG rules functioned correctly.
 
 ![Successful RDP connection to the VM](images/04-rdp-connected.png)
 
 ## Challenges & Troubleshooting
-- Initially couldn't connect via RDP — traced it back to the NSG rule I'd set being scoped to the wrong IP (my home IP had changed since I last checked it). Fixed by re-verifying my current public IP and updating the rule.
-- Was unable to select VM size - after some research identified that some services were not available in the Australia Southeast region therefore i selected a compatible service
+- Was unable to select VM size - after some research identified that some services were not available in my region therefore i selected a compatible service
+- Assumed the 'My IP Address' option in the NSG Rules would restrict to a single device, however, testing from multiple devices on the same home network revealed the rule is based on the networks public IP address via NAT (1 public facing IP address for all devices on the same home network), not per device. Confirmed this by testing from a device on mobile data which was correctly blocked. 
 
 ## Outcome
 Successfully deployed and secured a cloud VM, and gained a working understanding of how Azure handles resource grouping, VM provisioning, and network-level access control via NSGs.
