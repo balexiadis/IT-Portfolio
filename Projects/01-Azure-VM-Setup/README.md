@@ -1,4 +1,4 @@
-# Project 01: Deploying a Virtual Machine in Microsoft Azure
+# Project 01: Deploying a Windows 11 Virtual Machine in Microsoft Azure
 
 ## Objective
 Deploy a Windows Server virtual machine in Microsoft Azure, configure secure remote access, and document the process end-to-end. Goal: build hands-on familiarity with Azure's VM provisioning workflow and basic network security controls.
