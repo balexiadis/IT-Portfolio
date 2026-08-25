@@ -30,18 +30,22 @@ Named the VM (`01-Windows-Server-VM`), Selected a Windows Server 2022 image, set
 ![VM creation blade](images/3-vm-details.png)
 ![VM creation blade](images/3-deployment-complete.png)
 
-### 3. Connect via Remote Desktop
+### 4. Connect via Remote Desktop
 By default, Azure opens RDP (port 3389) to the whole internet meaning any machine can connect to it. I tested this by downloading the RDP file from the Azure Portal and using the Windows App for MacOS with the credentials set during provisioning.
 
-### 3. Configured the Network Security Group
+![Connecting via Remote Desktop](images/4-connect-through-windows-app.png)
+![Connecting via Remote Desktop](images/5-successful-connection.png)
+
+### 5. Configured the Network Security Group
 Because RDP (port 3389) is open to the whole internet, this opens a security risk. I edited the inbound rule to restrict RDP access to my home IP address only. Networking -> Network Settings -> Rules -> RDP -> Changed 'Source IP' from 'Any' to 'My IP Address'
 
-![NSG inbound rule restricted to my IP](images/03-nsg-rule.png)
+![NSG inbound rule restricted to my IP](images/6-inbound-rule.png)
 
-### 4. Retry Connection
+### 6. Retry Connection via Remote Desktop
 Attempted connection from 2 different machines: 1 with the authorised IP address and 1 without to test that the NSG rules functioned correctly.
 
-![Successful RDP connection to the VM](images/04-rdp-connected.png)
+![Successful RDP connection to the VM](images/7-allowed-ip.png)
+![connection to the VM denied](images/8-restricted-ip.png)
 
 ## Challenges & Troubleshooting
 - Was unable to select VM size - after some research identified that some services were not available in my region therefore i selected a compatible service
