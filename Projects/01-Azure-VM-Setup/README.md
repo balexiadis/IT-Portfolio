@@ -14,7 +14,7 @@ Deploy a Windows Server virtual machine in Microsoft Azure, configure secure rem
 ### 1. Create VM
 Begin the VM creation process: Side Bar > Virtual Machines > Create > Virtual Machine
 
-![Virtual machine creation](images/1-create-VM.png) 
+![Virtual machine creation](images/1-create-vm.png)
 
 ### 2. Created a Resource Group
 Set up a dedicated resource group (`01-Azure-VM-Setup-VMs`) to keep all resources for this project organised and easy to tear down afterward.
