@@ -11,13 +11,18 @@ Deploy a Windows Server virtual machine in Microsoft Azure, configure secure rem
 
 ## Steps Taken
 
-### 1. Created a Resource Group
-Set up a dedicated resource group (`rg-portfolio-vm`) to keep all resources for this project organized and easy to tear down afterward.
+### 1. Create VM
+Begin the VM creation process: Side Bar > Virtual Machines > Create > Virtual Machine
+
+![Virtual machine creation](images/1-create-VM.png) 
+
+### 2. Created a Resource Group
+Set up a dedicated resource group (`01-Azure-VM-Setup-VMs`) to keep all resources for this project organised and easy to tear down afterward.
 
 ![Resource group creation](images/01-resource-group.png)
 
-### 2. Provisioned the Virtual Machine
-Selected a Windows Server 2022 image, chose the B1s (free-tier eligible) size, and configured the admin username/password.
+### 3. Provisioned the Virtual Machine
+Named the VM ('01-Azure-VM'), Selected a Windows Server 2022 image, chose the B1s (free-tier eligible) size, and configured the admin username/password.
 
 ![VM creation blade](images/02-vm-create.png)
 
