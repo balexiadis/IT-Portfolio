@@ -7,6 +7,7 @@ Deploy a Windows Server as an Active Directory Domain Controller, join a client 
 - Microsoft Azure
 - Azure Virtual Machines
 - Windows Server 2022
+- Windows 11 Pro
 - Group Policy Management
 - Active Directory Domain Controller
 - Remote Desktop Protocol (RDP)
@@ -29,7 +30,7 @@ Set up a Windows Server 2022 VM (`dc-01`) within the new resource group with B2a
 ![Domain controller vm](images/03-dc-vm.png)
 
 ### 4. Created Client VM on same Network
-Deployed a Windows 11 client VM (`client-01`) inside the same resource group (`02-active-directory) and within the same VNet (`02-ad-vnet`) so the two VMs can communicate.
+Deployed a Windows 11 client VM (`client-01`) inside the same resource group (`02-active-directory`) and within the same VNet (`02-ad-vnet`) so the two VMs can communicate.
 
 ![Create client VM](images/04-client-vm.png)
 
@@ -39,15 +40,15 @@ Installed the AD DS role via Server Manager on `dc-01`. This only installs the A
 ![Active Directory Domain Services](images/05-ad-ds.png)
 
 ### 6. Promote dc-01 to Domain Controller
-Ran the AD DS Configuration Wizard and added a new forest called (`activedirectory.local`). This is what actually activates AD, it builds the AD database, creates the domain, and converts `dc-01` from a standalone server into a functioning domain controller. It also automatically installs the DNS Server role on (`dc-01`), since AD depends on DNS to advertise itself to other machines on the network.
+Ran the AD DS Configuration Wizard and added a new forest (`activedirectory.local`). This is what actually activates AD, it builds the AD database, creates the domain, and converts `dc-01` from a standalone server into a functioning domain controller. It also automatically installs the DNS Server role on `dc-01` since AD depends on DNS to advertise itself to other machines on the network.
 
 ### 7. Point VNet's DNS to dc-01
-By default (`02-ad-vnet`) used Azure's own DNS servers, which have no knowledge of the (`activedirectory.local`) domain I'd just created. I changed the VNet's DNS setting from default to custom, pointing it at (`dc-01`)'s private IP. Without this (`client-01`) would have no way to find the domain.
+By default `02-ad-vnet` used Azure's own DNS servers, which have no knowledge of the `activedirectory.local` domain I'd just created. I changed the VNet's DNS setting from default to custom, pointing it at `dc-01`'s private IP. Without this `client-01` would have no way to find the domain.
 
 ![Changed DNS server](07-dns-server.png)
 
-### 8. Join (`client-01`) to the Domain
-On (`client-01`) I went to System Properties -> Change -> Domain, and entered (`activedirectory.local`).
+### 8. Join `client-01` to the Domain
+On `client-01` I went to System Properties -> Change -> Domain, and entered `activedirectory.local`.
 
 ![Connect to domain](08-domain-name.png)
 
@@ -70,7 +71,7 @@ Logged into `client-01` with the new domain account to confirm authentication wa
 ![Login](10-newuser-login.png)
 
 ### 11. Add a Group Policy
-To demonstrate centralised policy enforcement, I created a GPO to push a custom desktop wallpaper to domain users
+To demonstrate centralised policy enforcement I created a GPO to push a custom desktop wallpaper to domain users
 
 ![Group Policy](11-gpo.png)
 
@@ -78,7 +79,7 @@ Enabled the Desktop Wallpaper GPO and pointed it to the share folder with the de
 
 ![Shared folder](11-shared-wp.png)
 
-Forced Group Policy update on (`client-01`) logged in on my user account.
+Forced Group Policy update on `client-01` logged in on my user account.
 
 ![GPO update](11-gpo-update.png)
 
@@ -92,9 +93,9 @@ Find the User needing password reset in "Active Directory Users and Computers" -
 ![Password reset](password-reset.png)
 
 ## Challenges & Troubleshooting
-- VM deployment failed with (`ResourceNotFound`) error because the VNet i had created during the VM provisioning had not finished deploying before my (`dc-01`) VM had tried to connect to it. Fixed this by creating the VNet in a standalone step from the Virtual Networks page.
+- VM deployment failed with `ResourceNotFound` error because the VNet i had created during the VM provisioning had not finished deploying before my (`dc-01`) VM had tried to connect to it. Fixed this by creating the VNet in a standalone step from the Virtual Networks page.
 - Login via RDP failed when the "User must change password at next Logon" setting was enabled because RDP doesn't have an interactive UI to complete the change. Since this was just a test account i disabled the option so no password change was required.
-- New user couldn't RDP into (`client-01`) despite being joined to the Domain because RDP access isn't enabled by default. I fixed this by the new user to the local "Remote Desktop Users" group via System Properties -> Remote
+- New user couldn't RDP into `client-01` despite being joined to the Domain because RDP access isn't enabled by default. I fixed this by the new user to the local "Remote Desktop Users" group via System Properties -> Remote
 
 ![remote user](remote.png)
 
