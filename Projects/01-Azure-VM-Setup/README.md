@@ -25,7 +25,7 @@ Set up a dedicated resource group (`01-Virtual-Machines`) to keep all resources 
 ![Resource group creation](images/2-create-resource-group.png)
 
 ### 3. Provisioned the Virtual Machine
-Named the VM (`01-Windows-Server-VM`), Selected a Windows Server 2022 image, set region to 'Australia East', chose the standard B2 (free-tier eligible) size, and configured the admin username/password, left default port open for future use.
+Named the VM (`01-Windows-Server`), Selected a Windows Server 2022 image, set region to 'Australia East', chose the standard B2 (free-tier eligible) size, and configured the admin username/password, left default port open for future use.
 
 ![VM creation blade](images/3-vm-details.png)
 ![VM creation blade](images/3-deployment-complete.png)
