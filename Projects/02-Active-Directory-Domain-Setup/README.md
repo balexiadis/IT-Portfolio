@@ -22,7 +22,7 @@ Set up a dedicated resource group (`02-active-directory`) for both the VMs i wil
 ### 2. Created Virtual Network
 Set up a VNet (`02-ad-vnet`) to seperate these VMs from others through the Virtual Networks page rather than inline during VM creation.
 
-![Vnet creation](02-vnet.png)
+![Vnet creation](images/02-vnet.png)
 
 ### 3. Created Domain Controller VM
 Set up a Windows Server 2022 VM (`dc-01`) within the new resource group with B2ats size. In Networking selected our (`02-ad-vnet`) virtual network.
