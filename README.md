@@ -10,4 +10,4 @@ A hands-on portfolio of IT projects — cloud deployments, networking, and syste
 | 03 | [Bulk Active Directory User Creation via PowerShell](Projects/03-bulk-ad-user-creation-powershell/README.md) | PowerShell, Active Directory, CSV | Automated bulk AD user creation from a CSV, including OU routing and random password generation. |
 | 04 | *Coming soon* | Azure, VNet, VLANs | Network segmentation lab using VLANs and firewall rules. |
 | 05 | *Coming soon* | Azure Monitor | Monitoring and alerting setup for existing Azure VMs. |
-| 06 | *Coming soon* | Microsoft Sentinel | SIEM setup for centralized log correlation and threat detection. |
+| 06 | *Coming soon* | Splunk | SIEM setup for centralised log correlation and threat detection. |
