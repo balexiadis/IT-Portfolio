@@ -45,7 +45,7 @@ Once verified the script works, we should change the script to create a random p
 
 Takes uppercase, lowercase, and numbers and picks a random combination of 12. Then prints them to the shell so admin can take note and give them to each user.
 
-![Passwords](images/06-passwords.png)
+![Passwords](images/06-password.png)
 
 ![Printed Passwords](images/07-printed-passwords.png)
 
