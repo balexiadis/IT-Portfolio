@@ -66,10 +66,10 @@ This shows that DNS isn't limited to just ip address resolution. TXT records are
 Used `nslookup` from the command line to specifically query `dns-01` for each record type and confirm correct resolution including the CNAME correctly resolving through to its target's IP, and the MX record correctly returning its mail server hostname and preference value.
 
 A Record:
-![A Record nslookup](images/09-cname-nslookup.png)
+![A Record nslookup](images/09-a-record-nslookup.png)
 
 CNAME Record:
-![CNAME Record nslookup](images/10-a-record-nslookup.png)
+![CNAME Record nslookup](images/10-cname-nslookup.png)
 
 MX Record and corresponding A Record:
 ![MX Record nslookup](images/11-mx-nslookup.png)
