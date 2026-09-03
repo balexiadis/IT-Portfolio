@@ -10,5 +10,5 @@ A hands-on portfolio of IT projects — cloud deployments, networking, and syste
 | 03 | [Bulk Active Directory User Creation via PowerShell](Projects/03-bulk-ad-user-creation-powershell/README.md) | PowerShell, Active Directory, CSV | Automated bulk AD user creation from a CSV, including OU routing and random password generation. |
 | 04 | [Standalone DNS Server & Zone Configuration](Projects/04-dns-server-configuration/README.md) | Windows Server, DNS | Deployed a standalone DNS server, configured a custom zone with A, CNAME, MX, and TXT records, and set up forwarding. |
 | 05 | *Coming soon* | Azure, VNet, VLANs | Network segmentation lab using VLANs and firewall rules. |
-| 06 | *Coming soon* | Azure Monitor | Monitoring and alerting setup for existing Azure VMs. |
+| 06 | [Azure Monitor & Alerting for VM Resource Thresholds](Projects/06-azure-monitor-alerting/README.md) | Azure Monitor, Alerts, Action Groups, PowerShell | Configured a full monitoring and alerting pipeline for an Azure VM, verified end-to-end with a real CPU spike and email notification. |
 | 07 | *Coming soon* | Splunk | SIEM setup for centralized log correlation and threat detection. |
