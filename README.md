@@ -12,5 +12,5 @@ A hands-on portfolio of IT projects/Cyber Security with step-by-step write-ups a
 | 05 | *Coming soon* | Azure, VNet, VLANs | Network segmentation lab using VLANs and firewall rules. |
 | 06 | [Azure Monitor & Alerting for VM Resource Thresholds](Projects/06-azure-monitor-alerting/README.md) | Azure Monitor, Alerts, Action Groups, PowerShell | Configured a full monitoring and alerting pipeline for an Azure VM, verified end-to-end with a real CPU spike and email notification. |
 | 07 | *Coming soon* | Splunk | SIEM setup for centralized log correlation and threat detection. |
-| 08 | *Coming soon* | Kali Linux, Metasploitable2 | Exploitation practice lab using Kali against an intentionally vulnerable VM. |
+| 08 | *Coming soon* | Kali Linux, Metasploitable2, metasploit, John the Ripper, NMAP | Exploitation practice lab using Kali against an intentionally vulnerable VM. |
 | 09 | *Coming soon* | Cuckoo Sandbox | Self-hosted automated malware analysis sandbox. |
