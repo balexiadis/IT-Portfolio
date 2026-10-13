@@ -141,7 +141,7 @@ We have the employee/caller `Abraham Lincoln` and the service desk agent `Abel T
 #### 2. Setting Manager
 I set our callers manager to `Adela Cervantsz` so that when the item is requested the person that must approve it is their manager.
 
-![Set manager](images/21-set-manager)
+![Set manager](images/21-set-manager.png)
 
 ##### 3. Ordering the Item
 Impersonating the caller (`Abraham Lincoln`) I ordered an Apple iPhone 13 replacement and answered the request form.
