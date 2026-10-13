@@ -14,4 +14,4 @@ A hands-on portfolio of IT projects/Cyber Security with step-by-step write-ups a
 | 07 | *Coming soon* | Splunk | SIEM setup for centralized log correlation and threat detection. |
 | 08 | [Kali Linux & Metasploitable2 Exploitation Lab](Projects/08-kali-metasploitable-exploitation-lab) | Kali Linux, Metasploitable2, metasploit, John the Ripper, NMAP | Exploitation practice lab using Kali against an intentionally vulnerable VM. |
 | 09 | *Coming soon* | Cuckoo Sandbox | Self-hosted automated malware analysis sandbox. |
-| 10 | *Coming soon* | ServiceNow (PDI), Flow Designer | Incident management lifecycle and a service catalog item with an approval workflow. |
+| 10 | [ServiceNow Incident Management & Service Catalog Lab](Projects/10-servicenow-incident-management) | ServiceNow (PDI), Flow Designer, Service Operations Workspace | Exploring the Incident management lifecycle, SLA timers, and a service catalog item request with an approval workflow. |
