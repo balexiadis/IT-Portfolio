@@ -12,7 +12,7 @@ Get familiar with ServiceNow ITSM workflows on a Personal Developer Instance to 
 
 ## Steps Taken
 
-### Phase 1: Exploring The Dashboard 
+### Task 1: Exploring The Dashboard 
 Before building anything, I explored the instance to understand how ServiceNow is organised and where each part of the ITSM lifecycle lives.
 
 #### 1. Navigating the Instance
@@ -47,7 +47,7 @@ The Asset Workspace is where hardware assets are tracked. The overview page flag
 
 ![Asset Workspace hardware asset overview](images/05-asset-workspace.png)
 
-### Phase 2: Users, Groups, and Roles 
+### Task 2: Users, Groups, and Roles 
 Before creating any tickets I set up the people and teams that would interact with them. A service desk needs someone raising incidents and someone resolving them, with different levels of access.
 
 #### 1. Creating the Users
@@ -65,7 +65,7 @@ Added `Abel Tuter` to the existing Service Desk group. Groups are what incidents
 
 ![Group](images/08-group.png)
 
-### Phase 3: Incident Walkthrough
+### Task 3: Incident Walkthrough
 With the correct users and roles setup i walked through a simulated incident to its completion in the service operations workspace
 
 #### 1. Impersonate Service Desk Agent
@@ -99,7 +99,7 @@ Ticket is now in the resolved incidents list:
 
 ![Resolved ticket](images/14-resolved-2.png)
 
-### Phase 4: SLA
+### Task 4: SLA
 I wanted to test how SLA's worked throughout a live incident lifecycle so i used a predefined SLA to test with.
 
 #### 1. Picking an SLA Definition
@@ -130,7 +130,7 @@ Resolved and closed the ticket and checked the SLA status to verify the SLA time
 
 ![SLA completed](images/19-sla-completed.png)
 
-### Phase 5: Service Catalog and Approval
+### Task 5: Service Catalog and Approval
 Incidents deal with things that are broken but a service desk also deals with requests. I wanted to walk through the flow of employee requesting something, the approver approving the request, and the service desk agent fulfilling the request. 
 
 #### 1. Setting Up Approver Permissions
