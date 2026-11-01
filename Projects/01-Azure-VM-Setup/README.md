@@ -3,7 +3,7 @@
 ## Objective
 Deploy a Windows Server virtual machine in Microsoft Azure, configure secure remote access, and document the process end-to-end. 
 
-Goal: build hands-on familiarity with Azure's VM provisioning workflow and basic network security controls.
+Goal: build hands-on familiarity with Azure's VM provisioning workflow and basic network security controls
 
 ## Tools & Technologies
 - Microsoft Azure (Free Tier)
