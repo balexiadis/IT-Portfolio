@@ -64,7 +64,7 @@ I also excluded my admin account to avoid getting locked out by any misconfigura
 
 I then added the Access Control for the MFA
 
-![Grant](images/07-grant)
+![Grant](images/07-grant.png)
 
 ### 8. Test MFA Policy
 Tried logging in to the `ca.test` account to test the MFA policy. The policy worked correctly, I was prompted to set up a second factor through the Microsoft Authenticator app which is what we were looking for.
