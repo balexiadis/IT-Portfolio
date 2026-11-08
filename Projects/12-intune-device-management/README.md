@@ -89,7 +89,7 @@ I also checked it was successful in Intune via the Policy settings report of the
 ### 11. Retired the Device
 Offboarded the Windows 11 device by disabling it in Entra ID first
 
-![Entra disable](images/13-entra-disabled.png)
+![Entra disable](images/13-entra-disable.png)
 
 Then deleted the device from Intune
 
